@@ -6,6 +6,17 @@ public class Diamond {
     public static void main(String[] args) {
         drawIsoscelesTriangle(3);
         drawIsoscelesTriangle(4);
+        drawDiamond(3);
+        drawDiamond(4);
+    }
+
+    private static void drawDiamond(int size) {
+        for (int i = 1; i <= size; i++) {
+            drawTriangleLine(i, size);
+        }
+        for (int i = size-1; i >= 1; i--) {
+            drawTriangleLine(i, size);
+        }
     }
 
     private static void drawIsoscelesTriangle(int size) {
