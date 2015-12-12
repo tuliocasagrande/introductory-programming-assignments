@@ -5,9 +5,18 @@ public class Diamond {
 
     public static void main(String[] args) {
         drawIsoscelesTriangle(3);
-        drawIsoscelesTriangle(4);
         drawDiamond(3);
-        drawDiamond(4);
+        drawDiamondWithName(3, "Tulio");
+    }
+
+    private static void drawDiamondWithName(int size, String name) {
+        for (int i = 1; i < size; i++) {
+            drawTriangleLine(i, size);
+        }
+        System.out.println(name);
+        for (int i = size-1; i >= 1; i--) {
+            drawTriangleLine(i, size);
+        }
     }
 
     private static void drawDiamond(int size) {
